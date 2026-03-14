@@ -1,12 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Resume Analyzer App
 
-# Run and deploy your AI Studio app
+## 📌 Project Description
+The Resume Analyzer App is a web application that analyzes resumes and provides feedback based on skills, keywords, and formatting.
 
-This contains everything you need to run your app locally.
+## 🚀 Features
+- Upload resume
+- Extract important information
+- Analyze skills and keywords
+- Provide suggestions for improvement
 
-View your app in AI Studio: https://ai.studio/apps/012ee7b6-99be-4c91-84f0-39a3a045fc86
+## 🛠️ Technologies Used
+- React
+- Node.js
+- Express
+- JavaScript
+- HTML
+- CSS
+
+## 📂 Project Structure
+resume-analyser-app
+│
+├── src
+├── public
+├── package.json
+└── README.md
+## ▶️ How to Run
+
+1. Install dependencies
+
+npm install
+
+2. Start the project
+
+npm run dev
+
+## 👨‍💻 Author
+S. Aswin Balaji
+MCA Student
 
 ## Run Locally
 
