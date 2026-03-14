@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "Job": {
+      "title": "Job Posting",
+      "description": "A job opening with specific requirements.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "Job title" },
+        "description": { "type": "string", "description": "Full job description" },
+        "skills": { "type": "array", "items": { "type": "string" }, "description": "List of required skills" },
+        "experience": { "type": "number", "description": "Minimum years of experience" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "createdBy": { "type": "string", "description": "UID of the recruiter" }
+      },
+      "required": ["title", "description", "skills", "createdBy"]
+    },
+    "Candidate": {
+      "title": "Candidate Application",
+      "description": "A candidate's application for a specific job.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "jobId": { "type": "string", "description": "ID of the job applied for" },
+        "score": { "type": "number", "description": "AI-generated match score (0-100)" },
+        "analysis": { "type": "string", "description": "AI-generated feedback on the candidate" },
+        "skillsFound": { "type": "array", "items": { "type": "string" } },
+        "experienceYears": { "type": "number" },
+        "resumeText": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "shortlisted", "rejected"] },
+        "appliedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "jobId", "score", "status"]
+    }
+  },
+  "firestore": {
+    "/jobs/{jobId}": {
+      "schema": "Job",
+      "description": "Collection of job postings"
+    },
+    "/candidates/{candidateId}": {
+      "schema": "Candidate",
+      "description": "Collection of candidate applications"
+    }
+  }
+}
